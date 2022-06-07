@@ -1,0 +1,33 @@
+/* { //用户登录
+    "result_set":
+    [
+        {
+            "database":"wfrest",
+            "field_count":1,
+            "fields_name":["user_pwd"],
+            "fields_type":["VAR_STRING"],
+            "rows":[
+                ["abLEFxdWWYR3c"]
+            ],
+            "rows_count":1,"table":"tbl_user"
+        }
+    ]
+}
+ */
+
+{
+    "affected_rows":1,
+    "info":"",
+    "insert_id":1,
+    "result_set":[
+        {
+            "affected_rows":1,
+            "info":"",
+            "insert_id":1,
+            "status":"OK",
+            "warnings":0
+        }
+    ],
+    "status":"OK",
+    "warnings":0
+}

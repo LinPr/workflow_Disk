@@ -26,6 +26,7 @@ int main()
 
     signal(SIGINT,sigHandler);
     wfrest::HttpServer server;
+    
 
     /* 1. 用户注册接口 */
     server.GET("/user/signup", [](const wfrest::HttpReq *req, wfrest::HttpResp *resp){
@@ -143,7 +144,7 @@ int main()
     /* 5. 从数据库中取出该用户对应存储的文件信息 */
     server.POST("/user/info", [](const wfrest::HttpReq *req, wfrest::HttpResp *resp){
         
-        // 1、解析前端信息
+        // 1、解析前端发送过来的信息
         std::map<std::string,std::string> userInfo = req->query_list();
         std::string username = userInfo["username"];
         std::map<std::string,std::string> form_KV = req->form_kv();
@@ -173,7 +174,11 @@ int main()
 
     /* 6. 上传文件接口 */
 
-    /* 4. 下载文件接口 */
+    /* 7. 下载文件接口 */
+
+
+
+
 
     if(server.track().start(1234) == 0){
     server.list_routes();
